@@ -1,0 +1,44 @@
+{
+  "required_api_version": "^2.0.0",
+  "name": "Baloo Search",
+  "description": "Search within the Baloo index",
+  "developer_name": "Brice MARTIN",
+  "icon": "images/icon.svg",
+  "options": {
+    "query_debounce": 0.1
+  },
+  "preferences": [
+    {
+      "id": "search_kw",
+      "type": "keyword",
+      "name": "Keyword",
+      "description": "Search keyword",
+      "default_value": "?"
+    },
+    {
+      "id": "limit_results",
+      "type": "input",
+      "name": "Limit results",
+      "description": "Maximum number of results to display",
+      "default_value": "10"
+    },
+    {
+      "id": "icons_path",
+      "type": "text",
+      "name": "Icons path",
+      "description": "MIME icons path",
+      "default_value": "/usr/share/icons/breath2-dark/mimetypes/64"
+    },
+    {
+      "id": "simplify_queries",
+      "type": "select",
+      "name": "Simplify queries",
+      "description": "Use t: instead of type: in the queries",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "default_value": "Yes"
+    }
+  ]
+}

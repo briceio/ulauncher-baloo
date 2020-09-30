@@ -14,7 +14,7 @@ For example, to search for all the files/folders containing "draft", type "? dra
 
 ## Index setup
 
-You have to setup your indexes correctly to benefit from this extension.
+To benefit from this extension you have to check that baloo is enabled (balooctl) and that your indexes are correctly setup.
 
 This can be done two ways:
 - Using Plasma general settings (sub settings Search / File Search)

@@ -12,6 +12,10 @@ The query syntax is the one offered by Baloo.
 
 For example, to search for all the files/folders containing "draft", type "? draft".
 
+## File location (focus in your file manager)
+
+If instead of opening your file in your default application, you want to locate it in your default file manager, press Alt+RETURN.
+
 ## Index setup
 
 To benefit from this extension you have to check that baloo is enabled (balooctl) and that your indexes are correctly setup.

@@ -4,6 +4,7 @@ from ulauncher.api.shared.event import KeywordQueryEvent, ItemEnterEvent
 from ulauncher.api.shared.item.ExtensionResultItem import ExtensionResultItem
 from ulauncher.api.shared.action.RenderResultListAction import RenderResultListAction
 from ulauncher.api.shared.action.OpenAction import OpenAction
+from ulauncher.api.shared.action.RunScriptAction import RunScriptAction
 from subprocess import PIPE, Popen
 from xdg import Mime
 import os.path
@@ -65,7 +66,8 @@ class KeywordQueryEventListener(EventListener):
             items.append(ExtensionResultItem(icon=icon,
                                              name=item_name,
                                              description=item_description,
-                                             on_enter=OpenAction(path)))
+                                             on_enter=OpenAction(path),
+                                             on_alt_enter=RunScriptAction("dbus-send --session --print-reply --dest=org.freedesktop.FileManager1 --type=method_call /org/freedesktop/FileManager1 org.freedesktop.FileManager1.ShowItems array:string:'" + path + "' string:''")))
 
         return RenderResultListAction(items)
 

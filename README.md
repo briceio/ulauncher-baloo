@@ -42,8 +42,22 @@ For eg. MIME-type icons are named: "application-x-blender.svg" or "text-css.svg"
 
 Default is: /usr/share/icons/breath2-dark/mimetypes/64
 
-### Simplify queries
+### Tags
 
-> Work in progress...
+If enabled, you can inject tags to filter out the results by types. 
 
-If enabled, it reduces the size of the query for faster typing. For eg. it allows you to replace the "type:" parameter of your query to "t:" to search for files, folder or documents. So instead of having to type "type:folder" you can type "t:folder".
+| Tag | Filter |
+|-|-|
+| #f | Folders |
+| #img | Images |
+| #audio | Audio files |
+| #video | Video files |
+| #doc | Documents  |
+| #pres | Presentations |
+| #ss | Spreadsheets |
+| #txt | Text files |
+| #z | Archives |
+
+Ex: To search for any folders containing "client", type:
+
+```? clients #f```

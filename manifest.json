@@ -30,10 +30,10 @@
       "default_value": "/usr/share/icons/breath2-dark/mimetypes/64"
     },
     {
-      "id": "simplify_queries",
+      "id": "tags",
       "type": "select",
-      "name": "Simplify queries",
-      "description": "Use t: instead of type: in the queries",
+      "name": "Support tags",
+      "description": "Use #f to search for folers, #img for images, #doc(uments), #txt, #audio, #video, #z (archives), #video, #pres, #ss (spreadsheets), ...",
       "options": [
         "Yes",
         "No"

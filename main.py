@@ -27,8 +27,16 @@ class KeywordQueryEventListener(EventListener):
             return RenderResultListAction(items)
 
         # prepare query
-        if extension.preferences['simplify_queries'] == "Yes":
-            query = query.replace("t:", "type:")
+        if extension.preferences['tags'] == "Yes":
+            query = query.replace("#f", "type:Folder")
+            query = query.replace("#img", "type:Image")
+            query = query.replace("#doc", "type:Document")
+            query = query.replace("#txt", "type:Text")
+            query = query.replace("#audio", "type:Audio")
+            query = query.replace("#z", "type:Archive")
+            query = query.replace("#video", "type:Video")
+            query = query.replace("#pres", "type:Presentation")
+            query = query.replace("#ss", "type:Spreadsheet")
 
         # search
         out, err = Popen(["baloosearch", "-l", extension.preferences['limit_results'], query], stdout=PIPE).communicate()
